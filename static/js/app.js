@@ -128,7 +128,10 @@ $(document).ready(function() {
 		fail: function(data) {
 			app.isLogined = false;
 			app.showMessageBar('#login-message', 'loadfailed');
-			// socket.io will retry automatically and periodically
+			if(app.socket && app.socket.socket.disconnect && app.socket.connect) {
+				app.socket.socket.disconnect();
+				app.socket.connect();
+			}
 			data.notRemove = true;
 		},
 	});

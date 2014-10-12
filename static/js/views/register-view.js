@@ -37,10 +37,11 @@ var app = app || {};
 					app.showMessageBar(id, data.err, 'error');
 				},
                 success: function () {
-					//if the register is ok
+					//app.showMessageBar(id, 'registerok');
+                    // if register is ok
                     app.socket.emit('login', {
-                       name: name,
-                       password: pass,
+                        name: name,
+                        password: pass,
                     });
 				},
             })) {

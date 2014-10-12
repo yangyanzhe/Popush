@@ -43,9 +43,6 @@ function log(){
 	}
 	process.on('uncaughtException', function(err){
 		log('uncaughtException: ' + err);
-		if (DEBUG) {
-			console.trace(err.stack);
-		}
 	});
 })();
 

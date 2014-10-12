@@ -38,7 +38,6 @@ var app = app || {};
             }
             else {
                 app.room.tryEnter(this.model, this.$('.col1 > *'));
-                e.preventDefault();
             }
         },
 		/*分享文件或文件夹*/
